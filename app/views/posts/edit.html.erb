@@ -1,0 +1,28 @@
+<%= form_for(@post) do |f| %>
+  <%= f.label :tile %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content, class: 'form-control' %>
+
+  <div class="form-group" id="post_date_time">
+    <%= f.label :date, "When to post?" %>
+    <div class='input-group date' id='datetimepicker'>
+      <%= f.text_field :date, :class => "form-control"%>
+      <span class="input-group-addon">
+        <i class="fa fa-calendar"></i>
+      </span>
+    </div>
+  </div>
+
+  <%= f.submit "Save changes", class: "btn btn-primary" %>
+<% end %>
+
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker').datetimepicker({
+      defaultDate: "<%= @post.date %>",
+      format: "YYYY-MM-DD hh:mm a Z"
+    });
+  });
+</script>

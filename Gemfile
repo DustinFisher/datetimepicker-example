@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap3-datetimepicker-rails'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'momentjs-rails'
 gem 'puma'
 gem 'rails', '4.2.2'
 gem 'sass-rails', '~> 5.0'
